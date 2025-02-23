@@ -28,19 +28,25 @@ Installation:
 
 2. Clone this project to a folder of your choice:
 
-```git clone https://github.com/AI-replica/self-description-to-finetuning-data.git```
+```
+git clone https://github.com/AI-replica/self-description-to-finetuning-data.git
+```
 
 3. Install dependencies:
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
-4. Set the API key:
-```export ANTHROPIC_API_KEY="your_api_key"```
+5. Set the API key:
+```
+export ANTHROPIC_API_KEY="your_api_key"
+```
 
-5. If necessary, set the correct path to the facts file.
+7. If necessary, set the correct path to the facts file.
 
-6. Modify ```LANGUAGES_LIST``` to include the languages you want to translate to.
+8. Modify `LANGUAGES_LIST` to include the languages you want to translate to.
 
-7. Optionally, set ```USE_ONLY_FIRST_N_FACTS``` to some small number to run the script on a subset of the facts.
+9. Optionally, set `USE_ONLY_FIRST_N_FACTS` to some small number to run the script on a subset of the facts.
 
-8. Run the script:
-```python finetuning_data_generator.py```
+10. Run the script:
+`python finetuning_data_generator.py`
