@@ -2,7 +2,7 @@ This script generates finetuning data in the [Alpaca format](https://github.com/
 
 The script works as follows:
 1. Convert each fact into a question.
-2. Translate the question and the answer into several languages (this helps the model to better remember the facts).
+2. Translate the question and the answer into several languages (this greatly helps the model to better remember the facts themselves, instead of memorizing the text as a sequence of tokens).
 3. Save the original and the translated questions and the answers to json in the Alpaca format.
 
 Example:
@@ -26,19 +26,21 @@ Installation:
 
 1. Get your Anthropic API key
 
-2. Install dependencies:
-pip install -r requirements.txt
+2. Clone this project to a folder of your choice:
 
-3. Set the API key:
-export ANTHROPIC_API_KEY="your_api_key"
+```git clone https://github.com/AI-replica/self-description-to-finetuning-data.git```
 
-4. If necessary, set the correct path to the facts file.
+3. Install dependencies:
+```pip install -r requirements.txt```
 
-5. Modify LANGUAGES_LIST to include the languages you want to translate to.
+4. Set the API key:
+```export ANTHROPIC_API_KEY="your_api_key"```
 
-6. Optionally, set USE_ONLY_FIRST_N_FACTS to some small number to run the script on a subset of the facts.
+5. If necessary, set the correct path to the facts file.
 
-7. Run the script:
-python finetuning_data_generator.py
+6. Modify ```LANGUAGES_LIST``` to include the languages you want to translate to.
 
-"""
+7. Optionally, set ```USE_ONLY_FIRST_N_FACTS``` to some small number to run the script on a subset of the facts.
+
+8. Run the script:
+```python finetuning_data_generator.py```
